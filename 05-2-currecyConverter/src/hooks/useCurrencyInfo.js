@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-function useCurrencyInfo(currency) {
+function useCurrencyInfo(currency){
     const [data, setData] = useState({})
     useEffect(() => {
         fetch(`https://api.exchangerate-api.com/v4/latest/${currency}`)
@@ -9,5 +9,4 @@ function useCurrencyInfo(currency) {
     }, [currency])
     return data
 }
-export default useCurrencyInfo;
-
+export default useCurrencyInfo

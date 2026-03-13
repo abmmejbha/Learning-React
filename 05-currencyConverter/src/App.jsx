@@ -18,14 +18,14 @@ function App() {
   const convert = () => {
     const rate = currencyInfo[to];
     setConvertedAmount(rate * amount);
-  }
+  };
 
   return (
     <>
       <div
         className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/bg.png')" }}
-        >
+      >
         <div className="w-full max-w-md mx-auto border border-b-indigo-400 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
@@ -62,12 +62,12 @@ function App() {
                 />
                 <hr className="border-gray-300" />
               </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-2 rounded-md"
-                >
-                  Convert {from.toUpperCase()} to {to.toUpperCase()}
-                </button>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 rounded-md"
+              >
+                Convert {from.toUpperCase()} to {to.toUpperCase()}
+              </button>
             </div>
           </form>
         </div>
