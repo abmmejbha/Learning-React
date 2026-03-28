@@ -1,20 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MovieContext, movies } from "./context/Context";
 import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
     <>
-      <div>
+      <MovieContext.Provider value={{ movies }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<MovieDetail />} />
           </Routes>
         </BrowserRouter>
-
-        {/* <Home /> */}
-      </div>
+      </MovieContext.Provider>
     </>
   );
 }

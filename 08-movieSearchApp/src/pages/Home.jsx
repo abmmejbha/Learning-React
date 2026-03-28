@@ -1,16 +1,11 @@
+import { useContext, useState } from "react";
 import MovieCard from "../components/MovieCard";
-import { useState } from "react";
-
-const movies = [
-  { id: 1, title: "Inception", year: 2010 },
-  { id: 2, title: "The Dark Knight", year: 2008 },
-  { id: 3, title: "Interstellar", year: 2014 },
-  { id: 4, title: "Parasite", year: 2019 },
-  { id: 5, title: "The Matrix", year: 1999 },
-];
+import { MovieContext } from "../context/Context";
 
 function Home() {
   const [search, setSearch] = useState("");
+
+  const { movies } = useContext(MovieContext);
 
   const filtered = movies.filter((movie) =>
     movie.title.toLowerCase().includes(search.toLowerCase()),
@@ -27,7 +22,12 @@ function Home() {
         />
 
         {filtered.map((movie) => (
-          <MovieCard key={movie.id} title={movie.title} year={movie.year} id={movie.id} />
+          <MovieCard
+            key={movie.id}
+            title={movie.title}
+            year={movie.year}
+            id={movie.id}
+          />
         ))}
       </div>
     </div>
