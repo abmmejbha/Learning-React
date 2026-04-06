@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #0ea5a4;
+  --brand-strong: #0f766e;
+  --accent: #f59e0b;
+  --text-light: #0f172a;
+  --text-dark: #e2e8f0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.brand-font {
+  font-family: "Sora", sans-serif;
+}
+
+.app-shell-light {
+  background:
+    radial-gradient(circle at 10% 10%, #ccfbf1 0%, transparent 30%),
+    radial-gradient(circle at 90% 20%, #fef3c7 0%, transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #ecfeff 45%, #f8fafc 100%);
+  color: var(--text-light);
+}
+
+.app-shell-dark {
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(20, 184, 166, 0.2) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(245, 158, 11, 0.16) 0%,
+      transparent 26%
+    ),
+    linear-gradient(180deg, #0b1120 0%, #111827 45%, #0b1120 100%);
+  color: var(--text-dark);
+}
+
+.section-fade {
+  animation: rise-in 0.6s ease both;
+}
+
+.glass-soft {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 28px -18px rgba(15, 23, 42, 0.45);
+}
+
+.neon-soft-btn {
+  background: #0ea5a4;
+  color: #ffffff;
+  box-shadow: 0 0 0 rgba(20, 184, 166, 0);
+  transition: all 0.3s ease;
+}
+
+.neon-soft-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(20, 184, 166, 0.35);
+  background: #0f766e;
+}
+
+.neon-soft-title {
+  text-shadow: 0 0 8px rgba(45, 212, 191, 0.18);
+  transition: text-shadow 0.3s ease;
+}
+.neon-soft-title:hover {
+  text-shadow: 0 0 16px rgba(45, 212, 191, 0.35);
+}
+
+.card-elevated {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card-elevated::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 45%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.card-elevated:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 24px 45px -16px rgba(15, 23, 42, 0.55);
+}
+
+.card-elevated:hover::after {
+  transform: translateX(120%);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
