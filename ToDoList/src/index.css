@@ -35,11 +35,11 @@ button{
   background-color: rgb(9, 177, 26)
 }
 .delete-button{
-  background-color: rgb(226, 107, 28);
+  background-color: rgba(226, 42, 9, 0.897);
   font-size: 1rem;
 }
 .delete-button:hover {
-  background-color: rgb(134, 5, 5)
+  background-color: rgb(158, 0, 0)
 }
 .move-button{
   background-color: rgb(22, 150, 224);
