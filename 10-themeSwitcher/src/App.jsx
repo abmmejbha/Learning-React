@@ -11,9 +11,9 @@ function App() {
 
   // থিম পরিবর্তন হলে HTML ক্লাসে পরিবর্তন আনা
   useEffect(() => {
-    const htmlElement = document.querySelector('html')
-    htmlElement.classList.remove("light", "dark")
-    htmlElement.classList.add(themeMode)
+    document.querySelector('html').classList.remove("light","dark")
+    document.querySelector('html').classList.add(themeMode)
+
   }, [themeMode])
 
   return (

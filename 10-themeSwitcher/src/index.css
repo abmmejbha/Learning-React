@@ -1,2 +1,9 @@
-@import 'tailwindcss'
+@import "tailwindcss";
 
+/* ডার্ক মোড সাপোর্ট করার জন্য */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+}
+
+/* যদি ম্যানুয়ালি ক্লাস দিয়ে ডার্ক মোড হ্যান্ডেল করতে চাও */
+@custom-variant dark (&:where(.dark, .dark *));
