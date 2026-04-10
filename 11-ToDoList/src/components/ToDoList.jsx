@@ -17,7 +17,7 @@ function ToDoList() {
       return;
     }
     setTasks((t) => [...t, newTasks]);
-    setNewTasks("");
+    setNewTasks(""); // task add houwar por input box clear kortesi
   }
 
   function deleteTask(index) {
