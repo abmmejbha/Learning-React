@@ -14,9 +14,13 @@ export const TodoContext = createContext({
     toggleComplete: (id) => {},
 }) // object toiri korechi
 
+// custom hook to use the context
 export const useTodo = () => {
-    return useContext(TodoContext)  // useContext ei TodoContext theke current value read korbe
+    // useContext ei TodoContext theke current value read korbe
+    return useContext(TodoContext)  
 }
 
-export const TodoProvider = TodoContext.Provider // TodoProvider hocche TodoContext er Provider 
-                                                // component, jeta value provide korbe to the components that need it.
+export const TodoProvider = TodoContext.Provider 
+// component, jeta value provide korbe to the components that need it.
+
+// export TodoContext, useTodo, TodoProvider
