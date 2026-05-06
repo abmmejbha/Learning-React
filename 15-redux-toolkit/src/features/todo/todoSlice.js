@@ -22,7 +22,9 @@ export const todoSlice = createSlice({
             }
             state.todo.push(todo)
         },
-        deleteTodo: () => { },
+        deleteTodo: (state, action) => {
+            state.todo = state.todo.filter((t) => t.id !== action.payload)
+         },
         updateTodo: () => { },
     }
 })
