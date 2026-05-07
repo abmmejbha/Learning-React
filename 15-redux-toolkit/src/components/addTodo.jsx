@@ -17,9 +17,10 @@ function AddTodo() {
     };
 
     return (
-        <div className="mx-auto mt-8 w-full max-w-2xl rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-lg backdrop-blur-sm">
+        <div className="mx-auto mt-8 w-full max-w-2xl rounded-2xl border border-slate-200 bg-blue-100 p-6 shadow-lg backdrop-blur-sm">
             <form onSubmit={addTodoHandler} className="flex gap-3">
                 <input
+                    autoFocus
                     type="text"
                     name="todo"
                     value={input}
@@ -29,7 +30,7 @@ function AddTodo() {
                 />
                 <button
                     type="submit"
-                    className="rounded-xl bg-cyan-600 px-5 py-3 font-semibold text-white transition hover:bg-cyan-700 active:scale-95"
+                    className="rounded-xl bg-cyan-600 px-5 cursor-pointer py-3 font-semibold text-white transition hover:bg-cyan-700 active:scale-95"
                 >
                     Add
                 </button>
