@@ -2,7 +2,7 @@
   "name": "08-moviesearchapp",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://abmmejbha.github.io/Learning-React/08-movieSearchApp/",
+  "homepage": "https://abmmejbha.github.io/Learning-React/",
   "type": "module",
   "scripts": {
     "dev": "vite",
